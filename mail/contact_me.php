@@ -17,7 +17,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
    
 
 $mail= new Sendgrid\Mail($from, $subject, $to, $content);
-$apikey = ("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")
+$apikey = 
 $sg = new \sendgrid($)
 // Create the email and send the message
 $to = 'salihucaleb2@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
