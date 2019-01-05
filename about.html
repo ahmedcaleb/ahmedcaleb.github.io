@@ -21,6 +21,70 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
+     <style>
+            {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }   
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
 
   </head>
 
@@ -35,6 +99,9 @@
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+         <div id="main">
+              <button class="btn" onclick="openNav()">Poems</button>  
+          </div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
@@ -54,13 +121,34 @@
             <li class="nav-item">
               <a class="nav-link" href="https://dm-mailinglist.com/subscribe?f=021a8488">Subscribe</a>
             </li>
+             <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="post.html">For your eyes only</a>
+              <a href="post2.html">I was about to break</a>
+              <a href="post3.html">I'll forever remain a broken jewel</a>
+              <a href="post4.html">He broke your heart</a>
+              <a href="John.html">Forever</a>
+              <a href="I%20can't%20stop.html">I can't stop</a>
+              <a href="maybe.html">Maybe</a>
+          </div>
           </ul>
         </div>
+        <script>
+              function openNav() {
+                  document.getElementById("mySidebar").style.width = "100%";
+                  
+              }
+
+              function closeNav() {
+                  document.getElementById("mySidebar").style.width = "0";
+                  
+              }
+          </script>
       </div>
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+    <header class="masthead" style="background-image: url('about2.jpeg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
